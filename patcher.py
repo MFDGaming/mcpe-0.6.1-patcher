@@ -1,6 +1,6 @@
 # Copyright Alexander Argentakis
 # Repo: https://github.com/MFDGaming/mcpe-0.6.1-patcher
-# This file is licensed under the GPL v2.0 license
+# This file is licensed under the MIT license
 
 import struct
 import sys
