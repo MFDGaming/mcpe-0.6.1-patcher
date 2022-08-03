@@ -50,14 +50,14 @@ class Patcher:
 
     def get_index(self, count):
         offset = count * 4
-        return struct.unpack(">i", self.header.indices[offset:offset+4])[0]
+        return struct.unpack(">I", self.header.indices[offset:offset+4])[0]
 
     def get_current_index(self):
         return self.get_index(self.count)
 
     def get_next_address(self):
         index = self.get_current_index()
-        return struct.unpack(">i", self.patch_array[index:index+4])[0]
+        return struct.unpack(">I", self.patch_array[index:index+4])[0]
 
     def get_data_length(self):
         start = self.get_current_index() + 4
